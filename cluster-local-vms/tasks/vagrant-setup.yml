@@ -8,6 +8,10 @@
     - { name: iptables, path: /usr/sbin/iptables-legacy }
     - { name: ip6tables, path: /usr/sbin/ip6tables-legacy }
 
+- name: patch
+  apt:
+    pkg: patch
+
 # See: https://www.jeffgeerling.com/k8s-cni-virtualbox
 - name: Retrieve current Flannel manifest from GitHub.
   get_url:
